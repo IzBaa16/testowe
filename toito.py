@@ -234,4 +234,101 @@ print(ternarySearch(lista, 29))
 
 
 
+
+
+
+
+
+import networkx as nx
+G = nx.Graph()
+G.add_edges_from([(1,2), (5,1), (4,1), (2,6), (1,8), (9,4)])
+nx.draw(G, with_labels=True)
+for i in G:
+    print(i)
+
+
+
+
+
+    import networkx as nx
+
+mac = [[0, 1, 1, 0, 0, 0, 1, 0, 1],
+
+[1, 0, 0, 1, 0, 0, 0, 1, 0],
+
+[1, 0, 0, 1, 1, 0, 0, 0, 0],
+
+[0,1, 1, 0, 0, 0, 0, 0, 0],
+
+[0, 0, 1, 0, 0, 1, 0, 0, 0],
+
+[0, 0, 0, 0, 1, 0, 1, 0, 0],
+
+[1, 0, 0, 0, 0, 1, 0, 0, 0],
+
+[0, 1, 0, 0, 0, 0, 0, 0, 1],
+
+[1, 0, 0, 0, 0, 0, 0, 1, 0]]
+def macierz(a):
+    wynik = []
+    counter = 0
+    coun = 0
+    for i in a:
+        coun = 0
+        for j in i:
+            if a[counter][coun] == 1:
+                wynik.append((counter,coun))
+            coun += 1
+        counter += 1
+    return wynik
+     
+x = macierz(mac)
+    
+G = nx.Graph()
+G.add_edges_from(x)
+nx.draw(G, with_labels=True)
+    
+
+
+
+#     a -> b -> c -> d -> e
+
+# b -> a -> c - > d
+
+# c -> a -> e
+
+# d -> a -> b
+
+# e -> a - > c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #    https://eduinf.waw.pl/inf/alg/003_sort/0025.php
